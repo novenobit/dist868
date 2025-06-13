@@ -1,0 +1,19 @@
+<?php
+//include("$dirRoot"."data/producto-data.php");
+if(isset($proData))
+{
+  $id_producto=$proData['id_producto'];
+  $cod_producto=$proData['cod_producto'];
+  $cod_producto=$proData['cod_producto'];
+  $codigo_barra=$proData['codigo_barra'];
+  $cod_categoria=$proData['cod_categoria'];
+  $cod_subcategoria=$proData['cod_subcategoria'];
+  $nom_producto=$proData['nom_producto'];
+  $pro_brevedato=$proData['pro_brevedato'];
+  $datos_producto=$proData['datos_producto'];
+  $precio1_producto=$proData['precio1_producto'];
+  $nom_unidad=$proData['nom_unidad'];
+  $foto_producto=$proData['foto_producto'];
+  $activo=$proData['activo'];
+}
+?>
