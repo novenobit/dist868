@@ -1,0 +1,297 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<link rel=".csheet" type="text/css" href="../libs2/components/reset.min.css">
+<link rel="stylesheet" type="text/css" href="../libs2/components/site.min.css">
+<link rel="stylesheet" type="text/css" href="../libs2/components/container.min.css">
+<link rel="stylesheet" type="text/css" href="../libs2/components/grid.min.css">
+<link rel="stylesheet" type="text/css" href="../libs2/components/card.min.css">
+<link rel="stylesheet" type="text/css" href="../libs2/components/segment.min.css">
+<link rel="stylesheet" type="text/css" href="../libs2/components/button.min.css">
+<link rel="stylesheet" type="text/css" href="../libs2/components/transition.min.css">
+<link rel="stylesheet" type="text/css" href="../libs2/components/text.min.css" />
+<!-- If Using CSS -->
+<link rel="stylesheet" type="text/css" href="../libs2/components/header.min.css">
+<link rel="stylesheet" type="text/css" href="../libs2/components/image.min.css">
+<link rel="stylesheet" type="text/css" href="../libs2/components/menu.min.css">
+<link rel="stylesheet" type="text/css" href="../libs2/components/icon.min.css">
+<link rel="stylesheet" type="text/css" href="../libs2/components/input.min.css">
+<link rel="stylesheet" type="text/css" href="../libs2/components/form.min.css">
+<link rel="stylesheet" type="text/css" href="../libs2/components/tab.min.css">
+<link rel="stylesheet" type="text/css" href="../libs2/components/table.min.css">
+<link rel="stylesheet" type="text/css" href="../libs2/components/popup.min.css">
+<link rel="stylesheet" type="text/css" href="../libs2/components/label.min.css">
+<link rel="stylesheet" type="text/css" href="../libs2/components/item.min.css">
+<link rel="stylesheet" type="text/css" href="../libs2/components/dropdown.min.css">
+<!-- End If Using CSS -->
+<!-- Extra -->
+
+<link rel="stylesheet" type="text/css" href="../libs2/css/style.css"/>
+<link rel="stylesheet" type="text/css" href="../libs2/css/cards.css"/>
+
+<link rel="stylesheet" type="text/css" href="../libs2/css/fontsstyle.css"/>
+
+</head>
+<body id="top" onLoad="document.forms[0].elements[0].focus()">
+
+<h1 class="ui header">Edita Producto</h1>
+
+
+<div class="ui top attached tabular menu">
+  <a class="active item" data-tab="datos">Datos</a>
+  <a class="item" data-tab="foto">Foto</a>
+</div>
+
+<div class="ui bottom attached active tab segment" data-tab="datos">
+  <div class="ui grey segment" style="background-color: #A0A0A0;color:#ffffff;">
+ <form class='ui grey form' action='producto-edit2.php?op=edt&id=2155' method='POST'  id='submitform'>
+ <div class="field">
+  <label>Nombre Producto</label>
+   <input value='ABLANDADOR EXC. EX-MTD-80' name='nom_producto' type='text'> </div>
+
+<div class="two fields">
+ <div class="field">
+   <label>Breve Descripci&oacute;n</label>
+   <input value='' name='pro_brevedato' type='text'> </div>
+ <div class="field">
+   <label>Descripci&oacute;n</label>
+   <input value='' name='datos_producto' type='text'> </div>
+</div>
+
+<div class="three fields">
+  <div class="field">
+    <label>Codigo Barra</label>
+    <input value='7453038403252' name='codigo_barra' type='text'>  </div>
+
+  <div class="field">
+    <label>UP/CEAN</label>
+    <input value='EX-MTD-80' name='cod_upcean' type='text'>  </div>
+  <div class="field">
+   <label>Unidad/Medida</label>
+   <select class='w3-input' name='nom_unidad'><option selected>PZA</option><option value='PO%'>PO%</option><option value='BLS'>BLS</option><option value='BOT'>BOT</option><option value='BUL'>BUL</option><option value='CAJ'>CAJ</option><option value='CUN'>CUN</option><option value='DOC'>DOC</option><option value='FCO'>FCO</option><option value='GAL'>GAL</option><option value='GRS'>GRS</option><option value='KGS'>KGS</option><option value='LAT'>LAT</option><option value='LTS'>LTS</option><option value='MIL'>MIL</option><option value='PAR'>PAR</option><option value='POT'>POT</option><option value='PQT'>PQT</option><option value='RLL'>RLL</option><option value='SCO'>SCO</option><option value='TAZ'>TAZ</option><option value='TOB'>TOB</option><option value='UND'>UND</option><option value='CAT'>CAT</option><option value='PZS'>PZS</option><option value='PAQ'>PAQ</option></select>
+  </div>
+
+</div>
+
+<div class="three fields">
+ <div class="field">
+   <label>Fisico</label>
+   <input value='' name='fisico' type='text'> </div>
+
+ <div class="field">
+   <label>Tamano</label>
+   <input value='0.00' name='tamano' type='text'> </div>
+ <div class="field">
+   <label>Peso</label>
+   <input value='0.00' name='peso' type='text'> </div>
+</div>
+
+<div class="two fields">
+ <div class="field">
+   <label>Bultos</label>
+   <input value='' name='bultos' type='text'> </div>
+
+  <div class="field">
+   <label>Empaque</label>
+   <input value='' name='empaque' type='text'> </div>
+</div>
+
+<div class="two fields">
+ <div class="field">
+   <label>Marca</label>
+   <input value='1' name='brand_marca' type='text'> </div>
+
+  <div class="field">
+   <label>Pais Origen</label>
+   <input value='' name='paisorigen' type='text'> </div>
+</div>
+
+
+<div class="two equal width fields">
+ <div class="field">
+  <label>Precio Compra</label>
+   <input value='0.00' name='precio_compra' type='text'> </div>
+ <div class="field">
+  <label>Precio Detal</label>
+   <input value='3.04' name='precio1_producto' type='text'> </div>
+</div>
+
+<div class="three equal width fields">
+ <div class="field">
+  <label>Precio Mayorista</label>
+   <input value='2.43' name='precio2_producto' type='text'> </div>
+ <div class="field">
+  <label>Precio Gran Mayorista</label>
+   <input value='2.19' name='precio3_producto' type='text'> </div>
+
+ <div class="field">
+  <label>Precio Especial</label>
+   <input value='0.00' name='precio4_producto' type='text'> </div>
+</div>
+
+<button class="ui blue button" type="submit">Enviar Datos</button>
+<button class="ui button" type="reset">Limpiar Campos</button>
+
+ </form>
+ </div>
+
+</div>
+<div class="ui bottom attached tab segment" data-tab="foto">
+   <div class='field'>
+        <img class='roundBox boxShadow' src='../imagenes/productos/sinfoto.png' style='height:200px;'>
+   </div>
+</div>
+
+
+
+<div class="result text-center"></div>
+
+<br><br><br>
+<script src="../libs2/jquery/jquery.min.js"></script>
+<script src="../libs2/jquery-ui/jquery-ui.min.js"></script>
+<script src="../libs2/components/visibility.min.js"></script>
+<script src="../libs2/components/transition.min.js"></script>
+<script src="../libs2/components/sidebar.min.js"></script>
+<script>
+  $(document)
+    .ready(function() {
+
+      // fix menu when passed
+      $('.masthead')
+        .visibility({
+          once: false,
+          onBottomPassed: function() {
+            $('.fixed.menu').transition('fade in');
+          },
+          onBottomPassedReverse: function() {
+            $('.fixed.menu').transition('fade out');
+          }
+        })
+      ;
+
+      // create sidebar and attach to menu open
+      $('.ui.sidebar')
+        .sidebar('attach events', '.toc.item')
+      ;
+
+    })
+  ;
+</script>
+
+<script src="../libs2/components/tab.min.js"></script>
+<script>
+ $('.menu .item')
+   .tab()
+ ;
+</script>
+<script src="../libs2/components/popup.min.js"></script>
+<script>
+$('.boundary.example .button')
+  .popup({
+    boundary: '.boundary.example .segment'
+  })
+;
+</script>
+<script src="../libs2/components/dropdown.min.js"></script>
+<script>
+$('.max.example .ui.normal.dropdown')
+  .dropdown({
+    maxSelections: 3
+  })
+;
+</script>
+<script>
+// A function that loads a page using jQuery
+function loadPage(url) {
+// Use the jQuery load method to load the page into the content element
+  $("#content").load(url);
+}
+</script>
+<script>
+  $(document).ready(function(){
+    $('#search').autocomplete({
+      source: "../bots/auto1-productos.php?dirRoot=../",
+      minLength: 1,
+      maxShowItems: 5,
+      select: function(event, ui)
+      {
+        $('#search').val(ui.item.value);
+      }
+    }).data('ui-autocomplete')._renderItem = function(ul, item){
+      return $("<li class='ui-autocomplete-row'></li>")
+        .data("item.autocomplete", item)
+        .append(item.label)
+        .appendTo(ul);
+    };
+  });
+</script>
+
+<script>
+ $(document).ready(function() {
+        $(".ui.toggle.button").click(function() {
+          $(".mobile.only.grid .ui.vertical.menu").toggle(100);
+        });
+
+        $(".ui.dropdown").dropdown();
+ });
+
+window.scroll({
+  behavior: 'smooth'
+});
+
+// Select all links with hashes
+$('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+      &&
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          };
+        });
+      }
+    }
+});
+</script>
+<script src="../libs2/scripts/pdscripts.js"></script>
+
+
+<script>
+    $('#submitform').submit(function (event) {
+     var id="2155";
+      event.preventDefault();
+      $.ajax({
+        type: "POST",
+        url: "producto-edit2.php?id=2155",
+        data: $(this).serialize(),
+        success: function (data) {
+          console.log(data);
+          $('.result').html(data);
+        }
+      });
+    });
+</script>
