@@ -1,0 +1,13 @@
+1|Administrador
+2|Supervisor
+3|Secretaria
+4|Cajero
+5|Vendedor Tienda
+6|Vendedor Externo
+7|T&amp;eacute;cnico
+8|Despachador
+9|Chofer
+10|Mensajero
+11|Motorizado
+12|Seguridad
+

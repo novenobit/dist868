@@ -1,0 +1,14 @@
+1|Inventario|E|INV
+2|Ventas|S|VEN
+3|Despacho|S|DEP
+4|Desperdicios|S|DES
+5|Vencimiento|S|VEC
+6|Danado|S|DAN
+7|Compra|E|COM
+8|Devoluciones|E|DEV
+9|Prestamo|E|PRE
+10|Traspaso|E|TRA
+11|Ajuste Entrada|E|AJE
+12|Ajuste Salida|S|AJS
+13|Transferir|S|TRS
+14|Se Perdio|S|PER

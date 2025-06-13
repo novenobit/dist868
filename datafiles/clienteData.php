@@ -1,0 +1,30 @@
+<?php
+//include("$dirRoot"."datafiles/clienteData.php");
+if(isset($clienteData))
+{
+   $id_cliente=$clienteData['id_cliente'];
+   $cid_cliente=$clienteData['cid_cliente'];
+   $cod_cliente=$clienteData['cod_cliente'];
+   $nom_cliente=$clienteData['nom_cliente'];
+   $empresa_cliente=$clienteData['empresa_cliente'];
+   $encargado=$clienteData['encargado'];
+   $dir1_cliente=$clienteData['dir1_cliente'];
+   $dir2_cliente=$clienteData['dir2_cliente'];
+   $ciudad_cliente=$clienteData['ciudad_cliente'];
+   $estado_cliente=$clienteData['estado_cliente'];
+   $id_pais=$clienteData['id_pais'];
+   $tel1_cliente=$clienteData['tel1_cliente'];
+   $tel2_cliente=$clienteData['tel2_cliente'];
+   $email_cliente=$clienteData['email_cliente'];
+   $url_cliente=$clienteData['url_cliente'];
+   $foto_cliente=$clienteData['foto_cliente'];
+   $tipo_cliente=$clienteData['tipo_cliente'];
+   $nivelprecio=$clienteData['nivelprecio'];
+   $nota_cliente=$clienteData['nota_cliente'];
+   $contribuyente=$clienteData['contribuyente'];
+   $lista_correo=$clienteData['lista_correo'];
+   $vendedor=$clienteData['vendedor'];
+   $ip_cliente=$clienteData['ip_cliente'];
+   $activo=$clienteData['activo'];
+}
+?>

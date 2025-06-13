@@ -1,0 +1,4 @@
+1|IVA|Impuesto Valor Agregado|16.00|01|09|2018
+2|UNT|Unidad Tributario|17.00|12|09|2018
+3|SM|Sueldo Minimo|1800.00|01|09|2018
+4|CT|Cesta Ticket|180.00|01|09|2018

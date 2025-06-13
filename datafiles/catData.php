@@ -1,0 +1,29 @@
+<?php
+//include("$dirRoot"."datafiles/catData.php");
+if(isset($catData))
+{
+ $id_categoria=$catData['id_categoria'];
+ $cod_categoria=$catData['cod_categoria'];
+ $codCat=$catData['cod_categoria'];
+ $nom_categoria=$catData['nom_categoria'];
+ $foto_categoria=$catData['foto_categoria'];
+ $banner_categoria=$catData['banner_categoria'];
+ $icono=$catData['icono'];
+ $nota=$catData['nota'];
+}
+if(isset($proCatData))
+{
+ $id_categoria=$proCatData['id_categoria'];
+ $cod_categoria=$proCatData['cod_categoria'];
+ $codCat=$proCatData['cod_categoria'];
+ $nom_categoria=$proCatData['nom_categoria'];
+ $foto_categoria=$proCatData['foto_categoria'];
+ $banner_categoria=$proCatData['banner_categoria'];
+ $icono=$proCatData['icono'];
+ $nota=$proCatData['nota'];
+}
+if(!isset($foto_categoria))
+{ $foto_categoria="sin-foto.png"; }
+if(!isset($nom_categoria))
+{ $nom_categoria=""; }
+?>

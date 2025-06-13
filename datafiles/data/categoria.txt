@@ -1,0 +1,14 @@
+|1|110|Accesorios Bebe|bebe.png| |baby carriage
+|2|115|Salud y Belleza|belleza.png|belleza.png|smile outline
+|3|120|Hogar y Cocina|hogar.png|hogar.png|home
+|4|125|Herramienta|herramientas.png|herramientas.png|tools
+|5|130|Electricidad|electricidad.png|lamparas.png|car battery
+|6|135|Iluminacion|lampara.png|lamparas.png|lightbulb
+|7|140|Electrodomesticos|electrodomestico2.png| |tv
+|8|145|Escolar y Oficina|papeleria.png|papeleria.png|pencil rule
+|10|155|Automotriz|auto.png|autos.png|car
+|11|160|Juegos y Juguetes|juegos.png| |gamepad
+|12|170|Mascota|mascotas.png| |paw
+|13|180|Ferreteria|ferreteria.png| |store alternate
+|14|185|Ofertas|ofertas.png| |bullhorn
+|15|187|Institucional|Institucional.jpg| |hiking

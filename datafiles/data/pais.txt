@@ -1,0 +1,4 @@
+1|ve|Venezuela
+2|pa|Panama
+3|ch|China
+4|us|USA

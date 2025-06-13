@@ -1,0 +1,4 @@
+1|Detal
+2|Mayorista
+3|Gran Mayorista
+4|Especial

@@ -1,0 +1,24 @@
+<?php
+//include("$dirRoot"."datafiles/areaSistema.php");
+if(isset($areasSistema))
+{
+ $id_area=$areasSistema['id'];
+ $usuario=$areasSistema['usuario'];
+ $AreaAdmin=$areasSistema['AreaAdmin'];
+ $AreaProductos=$areasSistema['AreaProductos'];
+ $AreaCuentas=$areasSistema['AreaCuentas'];
+ $AreaUsuario=$areasSistema['AreaUsuario'];
+ $CrearProductos=$areasSistema['CrearProductos'];
+ $CambiarDatos=$areasSistema['CambiarDatos'];
+ $CrearCuenta=$areasSistema['CrearCuenta'];
+ $Descuento=$areasSistema['Descuento'];
+ $LimpiarCuenta=$areasSistema['LimpiarCuenta'];
+ $Facturar=$areasSistema['Facturar'];
+ $AnularItems=$areasSistema['AnularItems'];
+ $VerPrecioMayor=$areasSistema['VerPrecioMayor'];
+ $VerPrecioEspecial=$areasSistema['VerPrecioEspecial'];
+ $VerVentas=$areasSistema['VerVentas'];
+ $CambiaFotos=$areasSistema['CambiaFotos'];
+ $CambiarPrecios=$areasSistema['CambiarPrecios'];
+}
+?>

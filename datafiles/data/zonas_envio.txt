@@ -1,0 +1,83 @@
+|1|Alta Florida|2.00|NULL
+|2|Altamira|1.50|NULL
+|3|Alto Prado|3.00|NULL
+|4|Bello Campo|1.50|NULL
+|5|Bello Monte|1.50|NULL
+|6|Boleita Norte y Sur|2.00|NULL
+|7|Campo Alegre|1.50|NULL
+|8|Campo Claro|1.50|NULL
+|9|Caurimare|2.00|NULL
+|10|Cerro Verde|3.00|NULL
+|11|Chacaito|1.50|NULL
+|12|Chacao|1.00|NULL
+|13|Chuao|1.50|NULL
+|14|Colinas de Bello Monte|2.00|NULL
+|15|Colinas de la California|2.00|NULL
+|16|Colinas de los Ruices|2.00|NULL
+|17|Colinas de Tamanaco|2.00|NULL
+|18|Colinas de Valle Arriba|2.00|NULL
+|19|Concresa|2.00|NULL
+|20|Country Club|1.50|NULL
+|21|Cumbres de Curumo|3.00|NULL
+|22|El Bosque|1.50|NULL
+|23|El Cafetal|2.00|NULL
+|24|El Marques|2.00|NULL
+|25|El Pedregal|1.50|NULL
+|26|El Recreo|1.50|NULL
+|27|El Rosal|2.00|NULL
+|28|La California Norte|2.00|NULL
+|29|La California Sur|2.00|NULL
+|30|La Campina|1.50|NULL
+|31|La Carlota|2.00|NULL
+|32|La Castellana|1.50|NULL
+|33|La Floresta|1.50|NULL
+|34|La Florida|1.50|NULL
+|35|La Tahona|3.00|NULL
+|36|La Trinidad|3.00|NULL
+|37|Las Acacias|3.00|NULL
+|38|Las Delicias|2.00|NULL
+|39|Las Mercedes|2.00|NULL
+|40|Las Mesetas de Santa Rosa de L.|3.00|NULL
+|41|Las Palmas|2.00|NULL
+|42|Lomas de las Mercedes|3.00|NULL
+|43|Lomas de los Ruices|3.00|NULL
+|44|Lomas de Prados del Este|3.00|NULL
+|45|Lomas de San Roman|3.00|NULL
+|46|Lomas del Mirador|3.00|NULL
+|47|Los Caobos|2.00|NULL
+|48|Los Cedros|1.50|NULL
+|49|Los Chorros|2.00|NULL
+|50|Los Chaguaramos|3.00|NULL
+|51|Los Cortijos de Lourdes|2.00|NULL
+|52|Los Dos Caminos|2.00|NULL
+|53|Los Naranjos de Las Mercedes|2.00|NULL
+|54|Los Naranjos del Cafetal|3.00|NULL
+|55|Los Palos Grandes|1.50|NULL
+|56|Los Ruices|2.00|NULL
+|57|Los Samanes|3.00|NULL
+|58|Los Simbolos|3.00|NULL
+|59|Macaracuay|3.00|NULL
+|60|Monte Cristo|2.00|NULL
+|61|Plaza Venezuela|2.00|NULL
+|62|Prados del Este|3.00|NULL
+|63|Sabana Grande|2.00|NULL
+|64|San Luis|2.00|NULL
+|65|San Marino|2.00|NULL
+|66|San Roman|2.00|NULL
+|67|Santa Ana Cafetal|2.00|NULL
+|68|Santa Cecilia|2.00|NULL
+|69|Santa Clara|2.00|NULL
+|70|Santa Eduvigis|2.00|NULL
+|71|Santa Fe|2.00|NULL
+|72|Santa Ines|2.00|NULL
+|73|Santa Marta|2.00|NULL
+|74|Santa Monica|2.00|NULL
+|75|Santa Paula|2.00|NULL
+|76|Santa Rosa de Lima|2.00|NULL
+|77|Santa Sofia|2.00|NULL
+|78|Sebucan|2.00|NULL
+|79|Terrazas del Club Hipico|2.00|NULL
+|80|Valle Abajo|3.00|NULL
+|81|Valle Arriba|2.00|NULL
+|82|Vizcaya|3.00|NULL
+|83|Lomas de la Trinidad|3.00|NULL

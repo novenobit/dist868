@@ -1,0 +1,18 @@
+1|CEO|1
+2|Gerente|2
+3|Administrador|2
+4|Supervisor|3
+5|Oficinista|3
+6|Encargado de Compras|4
+7|Recepcionista|4
+8|Secretaria|4
+9|Cajero|4
+10|Vendedor Tienda|5
+11|Vendedor Externo|5
+12|Mensajero|5
+13|Motorizado|5
+14|Despachador|5
+15|Chofer|5
+16|Limpieza|5
+17|Seguridad|5
+18|T&amp;eacute;cnico|5
