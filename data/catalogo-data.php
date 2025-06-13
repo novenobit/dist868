@@ -1,0 +1,10 @@
+<?php
+$idcatalgo=$catalogData['idcatalgo'];
+$usuario=$catalogData['usuario'];
+$cid_cliente=$catalogData['cid_cliente'];
+$nombre=$catalogData['nombre'];
+$hora=$catalogData['hora'];
+$fecha=$catalogData['fecha'];
+$nota_extra=$catalogData['nota_extra'];
+$rand_num=$catalogData['rand_num'];
+?>
