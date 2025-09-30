@@ -91,24 +91,16 @@ if(isset($mobile) and $mobile=="N")
 ?>
 
 <div class="ui container center aligned">
-  <h1 style="font-size:10vw">ven868.net</h1>
+  <img class="ui fluid image" src="./imagenes/empresa/logo868-l.png" alt="868.com">
   <h2>IMPORTACION DISTRIBUCION Y REPRESENTACION</h2>
   <h4>Ofrecemos gran variedad de productos de uso diario esenciales   nacionales e importados que complementa a las  empresas  de consumo masivo.</h4>
   <hr style="border-top: 1px dashed red;">
 </div>
 
-<div class="ui hidden divider"></div>
-<div class="ui container center aligned">
- <video  controls>
-  <source src="./imagenes/video/ven868.mp4" type="video/mp4">
- </video>
-</div>
-<div class="ui hidden divider"></div>
-
 <div class="ui container">
  <div class="ui internally celled grid">
   <div class="ten wide computer ten wide tablet sixteen wide mobile column">
-    <h3 class="ui header">¡Entre en un mundo de calidad y grandes ofertas: Visite nuestra tienda hoy mismo!</h3>
+    <h3 class="ui header">Te Invitamos a Visitenos</h3>
     <p>Direccion:  Esquina Peinero A Dr Diaz - Edificio 888 Pb - La Hoyada, Caracas - Distrito Capital 1020, Venezuela</p>
     <h3 class="ui header">Horario de Trabajo</h3>
     <p>Lun - Vie: 8:00 am - 4:00 pm</p>
@@ -116,7 +108,7 @@ if(isset($mobile) and $mobile=="N")
     <p>Domingo: Cerrado</p>
     <h3 class="ui header">Contacto</h3>
     <p>Correo: com868@hotmail.com</p>
-    <p>Telf: +58 212 5417903 / Cel: 0422 8868868
+    <p>Telf: +58 212 5417903
     <br>Reciba información sobre nuestras promociones, nuevos productos y las Ofertas.</p>
     <h3 class="ui header">Buscar BarCode</h3>
     <p>Puede buscar un producto por el Codigo de Barra: <?php echo "<a class='item' href='$dirRoot"."barcode1.php'><i class='big barcode icon'></i></a>"; ?></p>
@@ -124,7 +116,7 @@ if(isset($mobile) and $mobile=="N")
 
     <div class="ui two column grid center aligned">
      <div class="left attached column center aligned">
-      <p><a aria-label="Chat en WhatsApp" href="https://wa.me/584228868868">
+      <p><a aria-label="Chat en WhatsApp" href="https://wa.me/574241724157">
        <img alt="Chat con WhatsApp" src="./imagenes/empresa/whatsappButton.png" ></a></p>
      </div>
      <div class="right attached column centered">
@@ -263,7 +255,7 @@ else
   </div>
   <div class="card">
     <div class="image aos-item" aos="fade-left">
-      <img src="./imagenes/productos/pilas-aa4-868.png">
+      <img src="./imagenes/productos/pilas-aa4-868.jpg">
     </div>
   </div>
  </div>
@@ -343,31 +335,8 @@ else
     <p>Todos nuestros Cliente Dicen: "He sido cliente de esta empresa durante muchos años y siempre he estado contento con el servicio que he recibido. El personal es amable y está bien informado, y siempre hacen un esfuerzo adicional para ayudarme. Definitivamente lo haría Recomiendo esta empresa a cualquiera que busque una excelente experiencia para el cliente". - [todos los clientes]</p>
   </div>
 </div>
-</div>
 
-<div class="ui hidden divider"></div>
-<div class='ui container padded' style="background-color:#ffffff;color:#000;border-radius:25px;">
- <div class="ui stackable two column padded grid">
-  <div class="column" style="color:#FF69B4;text-align:center;">
- <h1 class="ui header">MARCA PAGINA STN-01-200 POINTER</h1>
-   <video width="100%" height="240"  controls>
-    <source src="./imagenes/video/7453038498494.mp4" type="video/mp4">
-   </video>
-  </div>
-  <div class="column">
-    <h3 class="ui header"><span class='blueTextBold'>Minas</span></h3>
-    <div class="content">
-     <div class="description padded">
-      <p>CodBarra: 7453038498494
-      <br>UPC/EAN: STN-01-200<br>Categoria: <a href='vercat1.php?codCat=145'>Escolar y Oficina</a>
-      <br>SubCategoria: <a href='vercat2.php?op=pl&id=3&codCat=145&codSubCat=1450150'>Minas</a>
-      <br>Und: PZA<br>Empaque: 5 X 240     01/06/2023<br>TM: POI<br>Excelente Calidad<br>Disponible en Nuestra Tienda<br><span class='font-14'>Ref S: 0.96</span></p><p><span class='font-red font-bold font-16'>Ref M: 0.98</span></a><br>Precio Especial para Distribuidores</p>
-      </div>
-     </div>
-   </div>
-  </div>
 </div>
-<div class="ui hidden divider"></div>
 
 <?php
 $showStatus="S";
@@ -377,4 +346,3 @@ if(isset($mobile) and $mobile=="N")
 }
 include("./includes/statusbar.php");
 ?>
-

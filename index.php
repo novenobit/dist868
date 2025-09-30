@@ -50,6 +50,17 @@ if($mobile=="S")
 else
 {
 ?>
+  <style>
+    #colorDiv {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      text-shadow: 1px 1px 2px black;
+    }
+  </style>
+
    <div class="ui container">
     <div class="ui mobile only grid">
      <div class="stretched row">
@@ -67,6 +78,7 @@ else
            include("./data/categoria4.php");
           ?>
         </div>
+       <div class="ui hidden divider"></div>
       </div>
     </div>
     <div class="ui computer only grid">
@@ -75,9 +87,16 @@ else
           <?php
            include("./data/categoria4.php");
           ?>
+         <div class="ui hidden divider"></div>
+        </div>
+        <div class="sixteen wide column padded" style="display:none;background:#101010;color:#fff;border-radius:25px;"  id="colorDiv">
+          <?php
+           include("./data/nuevos-prod.php");
+          ?>
         </div>
       </div>
     </div>
+    <div class="ui hidden divider"></div>
    </div>
 
 
@@ -96,8 +115,9 @@ else
    <!--End Section-->
    <div class="ui hidden divider"></div>
    <div class="ui container">
-       <h2 class="ui horizontal divider header aos-item" aos='fade-up-right'> <span class='blueText'><i class="heart outline icon"></i></span> Te van a <span class='blueTextBold'>gustar</span> estos productos populares</h2>
-
+      <div class="ui hidden divider"></div>
+       <h1 class="ui horizontal divider header aos-item" aos='fade-up-right'> <span class='blueText'><i class="heart outline icon"></i></span> productos populares</h1>
+      <div class="ui hidden divider"></div>
     <div class="ui computer only grid">
      <div class="stretched row">
         <div class="twelve wide column">
@@ -189,10 +209,10 @@ else
          ?>
      </div>
      <div class="column center aligned">
-      <div class="ui centered card">
+      <div class="ui centered card" style="max-width:100%;background-color:#25d366;color:#000000;">
        <h2>Síguenos en Whatsapp</h2>
         <div class="image">
-           <a href='https://wa.me/574242729756?text=I'm%20interested%20in%20your%20products%20for%20sale%20dist868' target='_blank'><img src="./imagenes/people/manager.png"" alt="Whatsapp"></a>
+           <a href='https://wa.me/584228868868?text=I'm%20interested%20in%20your%20products%20for%20sale%20dist868' target='_blank'><img src="./imagenes/people/manager.png"" alt="Whatsapp"></a>
         </div>
         <div class="content" style="max-width:100%;background-color:#ffffff;color:#000000;">
           <h1>Tienes una Pregunta?</h1>
@@ -203,7 +223,7 @@ else
              <br>Si tenemos Servicios de Despacho en la Gran Caracas</span></p>
 
           <div class="description">
-            <a aria-label="Chat en WhatsApp" href="https://wa.me/574242729756" target="_blank"> <img alt="Chat con WhatsApp" src="./imagenes/empresa/whatsappButton.png" class='ui rounded image'></a>
+            <a aria-label="Chat en WhatsApp" href="https://wa.me/584228868868" target="_blank"> <img alt="Chat con WhatsApp" src="./imagenes/empresa/whatsappButton.png" class='ui rounded image'></a>
           </div>
         </div>
      </div>
@@ -237,5 +257,34 @@ var swiper = new Swiper(".mySwiper", {
   loop: true,
 });
 </script>
+
+  <script>
+    // Array of colors to cycle through
+    const colors = [
+      '#FF0000', // Red
+      '#16a085', // Niagara
+      '#674172', // Honey Flower
+      '#DB0A5B', // Razzmatazz
+
+      '#F62459', // Radical Red
+      '#663399'  // rebeccapurple
+    ];
+
+    let currentIndex = 0;
+    const div = document.getElementById('colorDiv');
+
+    // Function to change background color
+    function changeBackgroundColor() {
+      div.style.backgroundColor = colors[currentIndex];
+
+      currentIndex = (currentIndex + 1) % colors.length; // Loop back to start
+    }
+
+    // Change color immediately on load
+    changeBackgroundColor();
+
+    // Then change every 60 seconds (60,000 ms)
+    setInterval(changeBackgroundColor, 30000);
+  </script>
 </body>
 </html>
