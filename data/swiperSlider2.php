@@ -57,8 +57,8 @@
 }
 </style>
 
-<a  href='user-registrar1.php' class="ui visible message" style="background-color:#e3e2e1;color:#000000;text-align:center;border-radius:15px;">
-  <p><span class='font-16'>Revendedores, Mayoristas y Distribuidores Entra Aqui.</span></p>
+<a  href='user-registrar1.php' class="ui visible message" style="background-color:#010101;color:#fff;text-align:center;border-radius:15px;">
+  <h3>Revendedores, Mayoristas y Distribuidores Entra Aqui.</h3>
 </a>
 
 <div class="ui hidden divider"></div>

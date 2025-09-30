@@ -26,8 +26,8 @@
     text-align: center;
     overflow: hidden;
     padding-bottom: 5px;
-    background: #fff;
-    color: #000;
+    background: #12A8E0;
+    color: #fff;
     border: 1px solid #E4E5EA;
     border-radius: 12px;
     transition: all 0.2s linear 0s;
@@ -37,7 +37,7 @@
     color: fff;
 }
 .iconlist li .icon-holder:hover .icon2 i {
-    color: #ffffff;
+    color: #fff;
 }
 .iconlist li .icon-holder .icon2 {
     padding: 10px;
@@ -45,7 +45,7 @@
 }
 .iconlist li .icon-holder .icon2 i {
     font-size: 3em;
-    color: #000;
+    color: #fff;
 }
 .iconlist li .icon-holder span {
     font-size: 12px;
