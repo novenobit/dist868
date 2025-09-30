@@ -81,7 +81,7 @@ if($showStatus=="S")
             <a href='#'><i class="large google plus icon"></i></a>
             <a href='#'><i class="large instagram icon"></i></a>
             <a href='#'><i class="large youtube icon"></i></a>
-            <a href='https://web.whatsapp.com/send?phone=+584242729756' target='_blank'><i class="large whatsapp icon"></i></a>
+            <a href='https://web.whatsapp.com/send?phone=+584228868868' target='_blank'><i class="large whatsapp icon"></i></a>
             <a href='#'><i class="large telegram icon"></i></a>
       </div>
     </div>
@@ -206,7 +206,7 @@ if(!isset($styleAll))
 if($styleAll=="S")
 {
 ?>
-<script src="<?php echo $dirRoot; ?>libs2/components/semantic.min.js"></script>
+<script src="<?php echo $dirRoot; ?>libs2/semantic.min.js"></script>
 <?php
 }
 else

@@ -133,6 +133,6 @@ if($item=="S")
 
 <link rel="stylesheet" type="text/css" href="<?php echo $dirRoot; ?>libs2/grid/simple-grid.min.css">
 <link rel="stylesheet" type="text/css" href="<?php echo $dirRoot; ?>libs2/css/fontsstyle.css">
-<link rel="stylesheet" type="text/css" href="<?php echo $dirRoot; ?>libs2/css/printer2.css">
+
 </head>
 <body>

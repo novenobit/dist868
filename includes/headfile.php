@@ -74,7 +74,7 @@ if(!isset($styleAll))
 if($styleAll=="S")
 {
 ?>
-<link href="<?php echo $dirRoot; ?>libs2/SemanticSimple/semantic.min.css" rel="stylesheet">
+<link href="<?php echo $dirRoot; ?>libs2/semantic.min.css" rel="stylesheet">
 <?php
 }
 if($styleAll=="N")

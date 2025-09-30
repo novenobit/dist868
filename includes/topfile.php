@@ -178,7 +178,7 @@ else
        <img class="logo" src="<?php echo $dirRoot; ?>imagenes/empresa/868-logo.png"  alt="ven868.net">
    </a>
    <a class="item" href='<?php echo $dirRoot; ?>index.php'> <i class="home icon"></i></a>
-   <a class="item" href="https://api.whatsapp.com/send?phone=584242729756" target='_blank'><i class="phone icon"></i></a>
+   <a class="item" href="https://api.whatsapp.com/send?phone=584228868868" target='_blank'><i class="phone icon"></i></a>
    <a class="item"><i class="facebook icon"></i></a>
 
    <div class="item computer only">
