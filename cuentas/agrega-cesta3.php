@@ -95,7 +95,7 @@ if(isset($catData))
    if($numPCest>0)
    { $bgColor="#ffff00"; }
 //   echo "<div class='eight wide column' style='background-color:$bgColor;border-radius:25px;'>";
-   echo "<div class='sixteen wide column' style='background-color:$bgColor;'>";
+   echo "<div class='sixteen wide column' style='background-color:$bgColor;border-top:1px solid #000;'>";
 //      echo "<a href='pro-buscar1.php?id_cuenta=$id_cuenta&buscar=$codPro&dondebuscar=codPro&nivelprecio=$nivelprecio&sistema=$sistema'>";
        if($fotoProducto<>"sinfoto.png")
        {

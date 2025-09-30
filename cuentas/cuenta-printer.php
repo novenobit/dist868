@@ -21,7 +21,22 @@ FechayHora();
 //{ $printerwidth="600px"; }
 ?>
 
-<div class="noPrintArea">
+<style>
+        body { font-family: Arial, sans-serif; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        table, th, td { border: 1px solid #ccc; }
+        th, td { padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+
+        /* CSS to hide non-printable elements during printing */
+        @media print {
+            .no-print {
+                display: none;
+            }
+        }
+</style>
+
+<div class="no-print">
  <div class="container">
       <div class="row">
         <div class="col-6">
@@ -36,6 +51,8 @@ FechayHora();
       </div>
  </div>
 </div>
+
+<div id="printableArea">
 
 <?php
 if(isset($_GET['id_cuenta']))
@@ -297,7 +314,20 @@ if($reg>0)
  // echo "<a 'limpia-cesta.php?id_cuenta=$id_cuenta' target='result'>Limpia Cesta</a>";
 }
 ?>
-<script language="JavaScript" type="text/javascript">
- if (window.print)
- { window.print(); }
+
+</div>
+
+
+
+
+<script>
+    function printDiv(divName) {
+        var printContents = document.getElementById(divName).innerHTML;
+        var originalContents = document.body.innerHTML;
+
+        document.body.innerHTML = printContents;
+        window.print();
+        document.body.innerHTML = originalContents;
+    }
 </script>
+

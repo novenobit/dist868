@@ -161,9 +161,12 @@ if(isset($numfactura) and $numfactura<>"")
         if($numFilas==0)
         {
           $totalPagos=0;
-          $sqlnewventa="insert into ventas(id_cuenta, numfactura,  empleado, cid_cliente, id_formapago, total_venta1, descuento, descuento_venta, total_venta2, monto_apagar, pago_cliente, nota_venta, anulada, dia, mes, ano, submitted)
-          values('$id_cuenta', '$numfactura', '$empleado', '$cid_cliente', '$id_formapago', '$total_venta1', '$descuento', '$descuento_venta', '$total_venta2',  '$monto_apagar', '$totalPagos', '$nota_venta', '$anulada', '$dia', '$mes', '$ano', '$now')";
-  echo "<br>$sqlnewventa";
+          if(!isset($sistema))
+          { $sistema="C"; }
+
+          $sqlnewventa="insert into ventas(id_cuenta, numfactura,  empleado, cid_cliente, id_formapago, total_venta1, descuento, descuento_venta, total_venta2, monto_apagar, pago_cliente, nota_venta, sistema, anulada, dia, mes, ano, submitted)
+          values('$id_cuenta', '$numfactura', '$empleado', '$cid_cliente', '$id_formapago', '$total_venta1', '$descuento', '$descuento_venta', '$total_venta2',  '$monto_apagar', '$totalPagos', '$nota_venta', '$sistema', '$anulada', '$dia', '$mes', '$ano', '$now')";
+  //echo "<br>$sqlnewventa";
           $sqlnewventa2=mysqli_query($conex1,$sqlnewventa);
         }
   }
