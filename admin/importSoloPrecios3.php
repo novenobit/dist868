@@ -48,6 +48,7 @@ if($AreaProductos<>"S" and $AreaAdmin<>"S")
 // --------------------------------------------
 $num=0;
 $numCambios=0;
+$numRepedito=0;
 $dia=date("d");
 $mes=date("m");
 $ano=date("Y");
@@ -80,21 +81,22 @@ while($proData=mysqli_fetch_array($sql))
 
 //---------------------------------------------------------------------------
   $numFilas=0;
-  $sql2=mysqli_query($conex1,"select * from proprecios where codigo_barra='$codigo_barra'");
+  $sql2=mysqli_query($conex1,"select * from proprecios2 where codigo_barra='$codigo_barra'");
   $numFilas=mysqli_num_rows($sql2);
   if($numFilas>0)
   {
    $proData2=mysqli_fetch_array($sql2);
-   $Nnom_producto=$proData2['nom_producto'];
+   //$Nnom_producto=$proData2['nom_producto'];
    $Nprecio1_producto=$proData2['precio1_producto'];
    $Nprecio2_producto=$proData2['precio2_producto'];
    $Nprecio3_producto=$proData2['precio3_producto'];
+
    if(isset($proData2['precio4_producto']))
    { $Nprecio4_producto=$proData2['precio4_producto']; }
    else
    { $Nprecio4_producto=0; }
    echo "<tr>";
-      echo "<td>$nom_producto
+      echo "<td>{$proData['nom_producto']} $nom_producto
       <br>$codigo_barra</td>
       <td>". number_format($Nprecio1_producto,2,',', '.') . "</td>
       <td>". number_format($Nprecio2_producto,2,',', '.') . "</td>
@@ -102,26 +104,21 @@ while($proData=mysqli_fetch_array($sql))
       <td>". number_format($Nprecio4_producto,2,',', '.') . "</td>
    </tr>";
    echo "<tr class='ui inverted yellow'>";
-      echo "<td>$Nnom_producto
-      <br>$codigo_barra</td>
+      echo "<td>$numFilas) $codigo_barra</td>
       <td>". number_format($Nprecio1_producto,2,',', '.') . "</td>
       <td>". number_format($Nprecio2_producto,2,',', '.') . "</td>
       <td>". number_format($Nprecio3_producto,2,',', '.') . "</td>
       <td>". number_format($Nprecio4_producto,2,',', '.') . "</td>
    </tr>";
-   //-----------------------------------------------------
+   if($numFilas>1)
+   {
+      echo "<tr class='ui inverted yellow'>";
+         echo "<td colspan=5> producto repedito - $numFilas</td>
+      </tr>";
+      $numRepedito++;
+   }
 
-     if($Nnom_producto<>$nom_producto)
-     {
-          $query2="update productos set nom_producto='$Nnom_producto' where id_producto='$id'";
-          //echo "<br>".$query2;
-          $result2=mysqli_query($conex1,$query2);
-          $cambios="S";
-          $numCambios++;
-          $datos_cambio="Cambio de Nombre";
-     }
    //-----------------------------------------------------
-
 
    if($Nprecio1_producto>0 and $Nprecio2_producto>0 and $Nprecio3_producto>0)
    {
@@ -172,7 +169,7 @@ while($proData=mysqli_fetch_array($sql))
 <div class="ui grid">
  <div class="eight wide column">
    <?php
-    echo "<h1>Total: $num</h1>";
+    echo "<h1>Total: $num / Num Repetido: $numRepedito</h1>";
    ?>
   </div>
   <div class="eight wide column">

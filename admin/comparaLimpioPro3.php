@@ -93,107 +93,109 @@ while($proData=mysqli_fetch_array($sql))
 //---------------------------------------------------------------------------
 // Codigo
 //---------------------------------------------------------------------------
-
-  $numFilas1=0;
-  $sql2=mysqli_query($conex1,"select * from productos where codigo_barra='$Tcodigo_barra'");
-  $numFilas1=mysqli_num_rows($sql2);
-  if($numFilas1>0)
-  {
-   $proData2=mysqli_fetch_array($sql2);
-   $id=$proData2['id_producto'];
-   $Dcodigo_barra=$proData2['codigo_barra'];
-   $Dnom_producto=$proData2['nom_producto'];
-   $Dprecio1_producto=$proData2['precio3_producto'];
-   $Dprecio2_producto=$proData2['precio2_producto'];
-   $Dprecio3_producto=$proData2['precio1_producto'];
-   if(isset($proData2['precio4_producto']))
-   { $Dprecio4_producto=$proData2['precio4_producto']; }
-   else
-   { $Dprecio4_producto=0; }
-
- //----------------------------------------------------
-   $cambios="N";
-   if($Dnom_producto<>$Tnom_producto)
-   { $cambios="S"; }
- //----------------------------------------------------
-   if($Tprecio1_producto<>$Dprecio1_producto)
-   { $cambios="S"; }
-   if($Tprecio2_producto<>$Dprecio2_producto)
-   { $cambios="S"; }
-   if($Tprecio3_producto<>$Dprecio3_producto)
-   { $cambios="S"; }
-   if($Tprecio4_producto<>$Dprecio4_producto and $Dprecio4_producto>0)
-   { $cambios="S"; }
- //----------------------------------------------------
-   if($cambios=="S")
+   if($Tcodigo_barra<>"")
    {
-    echo "<tr>";
-      echo "<td>$Dnom_producto</td>
-      <td>$Dcodigo_barra</td>
-      <td>". number_format($Dprecio1_producto,2,',', '.') . "</td>
-      <td>". number_format($Dprecio2_producto,2,',', '.') . "</td>
-      <td>". number_format($Dprecio3_producto,2,',', '.') . "</td>
-      <td>". number_format($Dprecio4_producto,2,',', '.') . "</td>
-    </tr>";
-    echo "<tr class='ui inverted yellow'>";
-      echo "<td>$Tnom_producto</td>
-      <td>$Tcodigo_barra</td>
-      <td>". number_format($Tprecio1_producto,2,',', '.') . "</td>
-      <td>". number_format($Tprecio2_producto,2,',', '.') . "</td>
-      <td>". number_format($Tprecio3_producto,2,',', '.') . "</td>
-      <td>". number_format($Tprecio4_producto,2,',', '.') . "</td>
-    </tr>";
-   //-----------------------------------------------------
-     if($Dnom_producto<>$Tnom_producto)
-     {
-          $query2="update productos set nom_producto='$Tnom_producto' where id_producto='$id'";
-          echo "<tr><td colspan='6'>".$query2."</td></tr>";
-          $result2=mysqli_query($conex1,$query2);
-          $cambios="S";
-          $numCambios++;
-          $datos_cambio="Cambio de Nombre";
-     }
-   //-----------------------------------------------------
-     if($Tprecio1_producto<>$Dprecio1_producto)
-     {
-          $query2="update productos set precio1_producto='$Tprecio1_producto' where id_producto='$id'";
-          echo "<tr><td colspan='6'>".$query2."</td></tr>";
-          $result2=mysqli_query($conex1,$query2);
-          $cambios="S";
-          $numCambios++;
-          $datos_cambio="Cambio de Precio1";
-     }
-     if($Tprecio2_producto<>$Dprecio2_producto)
-     {
-          $query2="update productos set precio2_producto='$Tprecio2_producto' where id_producto='$id'";
-          echo "<tr><td colspan='6'>".$query2."</td></tr>";
-          $result2=mysqli_query($conex1,$query2);
-          $cambios="S";
-          $numCambios++;
-          $datos_cambio="Cambio de Precio2";
-     }
-     if($Tprecio3_producto<>$Dprecio3_producto)
-     {
-          $query2="update productos set precio3_producto='$Tprecio3_producto' where id_producto='$id'";
-          echo "<tr><td colspan='6'>".$query2."</td></tr>";
-          $result2=mysqli_query($conex1,$query2);
-          $cambios="S";
-          $numCambios++;
-          $datos_cambio="Cambio de Precio3";
-     }
-     if($Tprecio4_producto<>$Dprecio4_producto and $Dprecio4_producto>0)
-     {
-          $query2="update productos set precio4_producto='$Tprecio4_producto' where id_producto='$id'";
-          echo "<tr><td colspan='6'>".$query2."</td></tr>";
-          $result2=mysqli_query($conex1,$query2);
-          $cambios="S";
-          $numCambios++;
-          $datos_cambio="Cambio de Precio4";
-     }
-     $numCod++;
-   }
-  }
+    $numFilas1=0;
+    //echo "<br>select * from productos where codigo_barra='$Tcodigo_barra'";
+    $sql2=mysqli_query($conex1,"select * from productos where codigo_barra='$Tcodigo_barra'");
+    $numFilas1=mysqli_num_rows($sql2);
+    if($numFilas1>0)
+    {
+    $proData2=mysqli_fetch_array($sql2);
+    $id=$proData2['id_producto'];
+    $Dcodigo_barra=$proData2['codigo_barra'];
+    $Dnom_producto=$proData2['nom_producto'];
+    $Dprecio1_producto=$proData2['precio3_producto'];
+    $Dprecio2_producto=$proData2['precio2_producto'];
+    $Dprecio3_producto=$proData2['precio1_producto'];
+    if(isset($proData2['precio4_producto']))
+    { $Dprecio4_producto=$proData2['precio4_producto']; }
+    else
+    { $Dprecio4_producto=0; }
 
+  //----------------------------------------------------
+    $cambios="N";
+    if($Dnom_producto<>$Tnom_producto)
+    { $cambios="S"; }
+  //----------------------------------------------------
+    if($Tprecio1_producto<>$Dprecio1_producto)
+    { $cambios="S"; }
+    if($Tprecio2_producto<>$Dprecio2_producto)
+    { $cambios="S"; }
+    if($Tprecio3_producto<>$Dprecio3_producto)
+    { $cambios="S"; }
+    if($Tprecio4_producto<>$Dprecio4_producto and $Dprecio4_producto>0)
+    { $cambios="S"; }
+  //----------------------------------------------------
+    if($cambios=="S")
+    {
+      echo "<tr>";
+        echo "<td>$Dnom_producto</td>
+        <td>$Dcodigo_barra</td>
+        <td>". number_format($Dprecio1_producto,2,',', '.') . "</td>
+        <td>". number_format($Dprecio2_producto,2,',', '.') . "</td>
+        <td>". number_format($Dprecio3_producto,2,',', '.') . "</td>
+        <td>". number_format($Dprecio4_producto,2,',', '.') . "</td>
+      </tr>";
+      echo "<tr class='ui inverted yellow'>";
+        echo "<td>$Tnom_producto</td>
+        <td>$Tcodigo_barra</td>
+        <td>". number_format($Tprecio1_producto,2,',', '.') . "</td>
+        <td>". number_format($Tprecio2_producto,2,',', '.') . "</td>
+        <td>". number_format($Tprecio3_producto,2,',', '.') . "</td>
+        <td>". number_format($Tprecio4_producto,2,',', '.') . "</td>
+      </tr>";
+    //-----------------------------------------------------
+      if($Dnom_producto<>$Tnom_producto)
+      {
+            $query2="update productos set nom_producto='$Tnom_producto' where id_producto='$id'";
+            echo "<tr><td colspan='6'>".$query2."</td></tr>";
+            $result2=mysqli_query($conex1,$query2);
+            $cambios="S";
+            $numCambios++;
+            $datos_cambio="Cambio de Nombre";
+      }
+    //-----------------------------------------------------
+      if($Tprecio1_producto<>$Dprecio1_producto)
+      {
+            $query2="update productos set precio1_producto='$Tprecio1_producto' where id_producto='$id'";
+            echo "<tr><td colspan='6'>".$query2."</td></tr>";
+            $result2=mysqli_query($conex1,$query2);
+            $cambios="S";
+            $numCambios++;
+            $datos_cambio="Cambio de Precio1";
+      }
+      if($Tprecio2_producto<>$Dprecio2_producto)
+      {
+            $query2="update productos set precio2_producto='$Tprecio2_producto' where id_producto='$id'";
+            echo "<tr><td colspan='6'>".$query2."</td></tr>";
+            $result2=mysqli_query($conex1,$query2);
+            $cambios="S";
+            $numCambios++;
+            $datos_cambio="Cambio de Precio2";
+      }
+      if($Tprecio3_producto<>$Dprecio3_producto)
+      {
+            $query2="update productos set precio3_producto='$Tprecio3_producto' where id_producto='$id'";
+            echo "<tr><td colspan='6'>".$query2."</td></tr>";
+            $result2=mysqli_query($conex1,$query2);
+            $cambios="S";
+            $numCambios++;
+            $datos_cambio="Cambio de Precio3";
+      }
+      if($Tprecio4_producto<>$Dprecio4_producto and $Dprecio4_producto>0)
+      {
+            $query2="update productos set precio4_producto='$Tprecio4_producto' where id_producto='$id'";
+            echo "<tr><td colspan='6'>".$query2."</td></tr>";
+            $result2=mysqli_query($conex1,$query2);
+            $cambios="S";
+            $numCambios++;
+            $datos_cambio="Cambio de Precio4";
+      }
+      $numCod++;
+    }
+    }
+   }
 //-----------------------------------------------------
 // Nombre
 //-----------------------------------------------------
@@ -314,8 +316,10 @@ while($proData=mysqli_fetch_array($sql))
     else
     { $precio4_producto=0; }
     $query2="";
-    include("../datafiles/pro-variables.php");
-    include("../datafiles/insert-pro-data.php");
+    // include("../datafiles/pro-variables.php");
+    // include("../datafiles/insert-pro-data.php");
+include("../datafiles/insertProductos.php");
+
     if(isset($query2))
     {
        echo "<tr><td colspan='6'>".$query2."</td></tr>";

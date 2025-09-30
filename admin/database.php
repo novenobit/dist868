@@ -251,7 +251,7 @@ if($AreaProductos<>"S" and $AreaAdmin<>"S")
              ?>
              <p>Estructura de los Datos a Importar</p>
              <p class='font-red' id="p6">codigo_barra<span class='font-black font-bold'>&#124;</span>nom_producto<span class='font-black font-bold'>&#124;</span>precio1_producto<span class='font-black font-bold'>&#124;</span>precio2_producto<span class='font-black font-bold'>&#124;</span>precio3_producto<span class='font-black font-bold'>&#124;</span>precio4_producto             <span class='font-black font-bold'>&#124;</span>nom_unidad<span class='font-black font-bold'>&#124;</span>empaque<span class='font-black font-bold'>&#124;</span>activo</p>
-             <a class='tiny ui purple button' onclick="copyToClipboard('#p6')">copiar</a>
+             <a class='tiny ui purple button' onclick="copyToClipboard('#p7')">copiar</a>
              <br>Codigo Barra
              <br>Nombre del Producto
              <br>Precio1_Detal
@@ -346,7 +346,7 @@ if($AreaProductos<>"S" and $AreaAdmin<>"S")
 
 <!-- Unir Data Solo Precios -->
       <tr>
-       <td style="width:240px;vertical-align:top;"><a class='fluid  ui  blue button' href='importSoloPrecios2.php' target='data2'>Actualiza Solo Precios</a></td>
+       <td style="width:240px;vertical-align:top;"><a class='fluid  ui  blue button' href='importSoloPrecios2.php' target='data2'>Actualiza Solo Precios2</a></td>
        <td style="background-color:#ffffff;color:#000000;">
          <div class="ui accordion">
            <div class="title">
@@ -355,11 +355,70 @@ if($AreaProductos<>"S" and $AreaAdmin<>"S")
            </div>
            <div class="content">
              <p>Actualiza Precios Despues de Importar Datos de Precios</p>
+
+             <p>Estructura de los Datos a Importar</p>
+             <p class='font-red' id="p6">codigo_barra<span class='font-black font-bold'>&#124;</span>nom_producto<span class='font-black font-bold'>&#124;</span>precio1_producto<span class='font-black font-bold'>&#124;</span>precio2_producto<span class='font-black font-bold'>&#124;</span>precio3_producto<span class='font-black font-bold'>&#124;</span>precio4_producto             <span class='font-black font-bold'>&#124;</span>nom_unidad<span class='font-black font-bold'>&#124;</span>empaque<span class='font-black font-bold'>&#124;</span>activo</p>
+             <a class='tiny ui purple button' onclick="copyToClipboard('#p8')">copiar</a>
+             <br>Codigo Barra
+             <br>Nombre del Producto
+             <br>Precio1_Detal
+             <br>Precio2_Mayor
+             <br>Precio3_SuperMayor
+             <br>Precio4_Especial
            </div>
          </div>
        </td>
       </tr>
       </tr>
+
+<!-- Unir Data Solo Precios -->
+      <tr>
+       <td style="width:240px;vertical-align:top;"><a class='fluid  ui  yellow button' href='importSoloPrecios3.php' target='data2'>Actualiza Solo Precios3</a></td>
+       <td style="background-color:#ffffff;color:#000000;">
+         <div class="ui accordion">
+           <div class="title">
+             <i class="dropdown icon"></i>
+             Actualiza Solo los Precios  (Paso 3)
+           </div>
+           <div class="content">
+             <p>Actualiza Precios Despues de Importar Datos de Precios</p>
+
+             <p>Estructura de los Datos a Importar</p>
+             <p class='font-red' id="p6">codigo_barra<span class='font-black font-bold'>&#124;</span>precio1_producto<span class='font-black font-bold'>&#124;</span>precio2_producto<span class='font-black font-bold'>&#124;</span>precio3_producto<span class='font-black font-bold'>&#124;</span>precio4_producto             <span class='font-black font-bold'>&#124;</span>nom_unidad<span class='font-black font-bold'>&#124;</span>empaque<span class='font-black font-bold'>&#124;</span>activo</p>
+             <a class='tiny ui purple button' onclick="copyToClipboard('#p9')">copiar</a>
+             <br>Codigo Barra
+             <br>Precio1_Detal
+             <br>Precio2_Mayor
+             <br>Precio3_SuperMayor
+             <br>Precio4_Especial
+
+           </div>
+         </div>
+       </td>
+      </tr>
+
+<!-- Unir Data Solo Precios -->
+      <tr>
+       <td style="width:240px;vertical-align:top;"><a class='fluid  ui  green button' href='importSoloNombre.php' target='data2'>Actualiza Solo Nombre</a></td>
+       <td style="background-color:#ffffff;color:#000000;">
+         <div class="ui accordion">
+           <div class="title">
+             <i class="dropdown icon"></i>
+             Actualiza Solo los Nombres
+           </div>
+           <div class="content">
+             <p>Actualiza Nombres</p>
+
+             <p>Estructura de los Datos a Importar</p>
+             <p class='font-red' id="p91">codigo_barra<span class='font-black font-bold'>&#124;</span>nom_producto</p>
+             <a class='tiny ui purple button' onclick="copyToClipboard('#p91')">copiar</a>
+             <br>Codigo Barra
+             <br>Nombre Producto
+           </div>
+         </div>
+       </td>
+      </tr>
+
 
 <!-- Import Data Fotos -->
       <tr>
@@ -436,12 +495,41 @@ if($AreaProductos<>"S" and $AreaAdmin<>"S")
               }
              ?>
              <p>Estructura de los Datos a Importar</p>
-             <p class='font-red' id="p7">Codigo_Producto<span class='font-black font-bold'>&#124;</span>PrecioDetal<span class='font-black font-bold'>&#124;</span>PrecioMayorista<span class='font-black font-bold'>&#124;</span>Gran Mayorista<span class='font-black font-bold'>&#124;</span>Especial</p>
-             <a class='tiny ui purple button' onclick="copyToClipboard('#p7')">copiar</a>
+             <p class='font-red' id="p9">Codigo_Producto<span class='font-black font-bold'>&#124;</span>PrecioDetal<span class='font-black font-bold'>&#124;</span>PrecioMayorista<span class='font-black font-bold'>&#124;</span>Gran Mayorista<span class='font-black font-bold'>&#124;</span>Especial</p>
+             <a class='tiny ui purple button' onclick="copyToClipboard('#p10')">copiar</a>
            </div>
          </div>
        </td>
       </tr>
+
+<!-- Import Data Empaques -->
+      <tr>
+       <td style="width:240px;vertical-align:top;"><a class='fluid  ui pink button' href='importData-Empaques-Simple.php' target='data2'>importData-Empaques-Simple</a></td>
+       <td style="background-color:#ffffff;color:#000000;">
+         <div class="ui accordion">
+           <div class="title">
+             <i class="dropdown icon"></i>
+             import Data Empaques Simple de los Productos
+           </div>
+           <div class="content">
+             <p class="font-red"><b>Nombre Archivo:</b> productos-empaques-simple.csv</p>
+             <?php
+              if(file_exists("../docs/productos-empaques-simple.csv")) {
+               echo "<p class='font-blue font-bold'>El Archivo Existe</p>";
+              }
+              else
+              {
+               echo "<p class='font-red font-bold'>El Archivo NO Existe</p>";
+              }
+             ?>
+             <p>Estructura de los Datos a Importar</p>
+             <p class='font-red' id="p8">Codigo_Producto<span class='font-black font-bold'>&#124;</span>Empaque</p>
+             <a class='tiny ui purple button' onclick="copyToClipboard('#p11')">copiar</a>
+           </div>
+         </div>
+       </td>
+      </tr>
+
 <!-- Import Data Empaques -->
       <tr>
        <td style="width:240px;vertical-align:top;"><a class='fluid  ui pink button' href='importData-Empaques.php' target='data2'>importData-Empaques</a></td>
@@ -464,7 +552,7 @@ if($AreaProductos<>"S" and $AreaAdmin<>"S")
              ?>
              <p>Estructura de los Datos a Importar</p>
              <p class='font-red' id="p8">Codigo_Producto<span class='font-black font-bold'>&#124;</span>NombreProducto<span class='font-black font-bold'>&#124;</span>Unidad<span class='font-black font-bold'>&#124;</span>Empaque</p>
-             <a class='tiny ui purple button' onclick="copyToClipboard('#p8')">copiar</a>
+             <a class='tiny ui purple button' onclick="copyToClipboard('#p12')">copiar</a>
            </div>
          </div>
        </td>
@@ -518,7 +606,7 @@ if($AreaProductos<>"S" and $AreaAdmin<>"S")
              ?>
              <p>Estructura de los Datos Existencia</p>
              <p class='font-red' id="p9">Codigo_Barra<span class='font-black font-bold'>&#124;</span>Stock</p>
-             <a class='tiny ui purple button' onclick="copyToClipboard('#p9')">copiar</a>
+             <a class='tiny ui purple button' onclick="copyToClipboard('#p13')">copiar</a>
            </div>
          </div>
        </td>
