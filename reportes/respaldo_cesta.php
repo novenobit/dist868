@@ -38,26 +38,26 @@
     $precio1_producto=$cestaData['precio1_producto'];
     $sqlPro=mysqli_query($conex1,"select cod_categoria,cod_subcategoria,nom_producto,precio1_producto,precio2_producto,precio3_producto,precio4_producto,foto_producto from productos where cod_producto='$cod_producto'");
     $proData=mysqli_fetch_array($sqlPro);
+    $foto_producto="sinfoto2.png";
+    $total=0;
+    $nom_producto="sin datos";
     if(isset($proData))
     {
       $foto_producto=$proData['foto_producto'];
       $cod_categoria=$proData['cod_categoria'];
       $cod_subcategoria=$proData['cod_subcategoria'];
       $nom_producto=$proData['nom_producto'];
+      $foto_producto=$proData['foto_producto'];
+
       $total=$cantidad*$precio1_producto;
       $Ttotal=$Ttotal+$total;
     }
     // Show Cesta Data
     echo "<tr>
      <td class='center aligned' style='width:100px;'>";
-
-        if($proData['foto_producto']<>"")
+        if($foto_producto<>"")
         {
-          echo "<img class='ui small centered image' src='$dirRoot"."imagenes/productos/{$proData['foto_producto']}' style='height:60px'>";
-        }
-        else
-        {
-          echo "<img class='ui centered circular image' src='$dirRoot"."imagenes/productos/sinfoto2.png' style='height:50px'>";
+          echo "<img class='ui small centered image' src='$dirRoot"."imagenes/productos/$foto_producto' style='height:60px'>";
         }
      echo "</td>
      <td>$nom_producto</td>

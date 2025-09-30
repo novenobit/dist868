@@ -67,7 +67,7 @@
 <div class="ui modal" id="modal<?php echo $num; ?>" style="background-color:#212121;height:500px;">
  <div class="header"><?php echo $nom_cliente; ?></div>
  <div class="scrolling content"  style="background-color:#ededed;">
-   <iframe src="<?php echo "venta-ver.php?id=$id_venta&modalId=$num&sistema=$sistema"; ?>" height='520px' width='100%' name='data2' frameborder='0' scrolling='auto' allowtransparency='true'></iframe>
+   <iframe src="<?php echo "venta-ver.php?id=$id_venta&modalId=$num"; ?>" height='520px' width='100%' name='data2' frameborder='0' scrolling='auto' allowtransparency='true'></iframe>
  </div>
  <div class="actions">
 
@@ -91,8 +91,8 @@
                <a class='ui compact blue button' data-inverted='' data-tooltip='Ver los Datos de {$clienteData['nom_cliente']}' data-position='top left' href='cliente-ver3.php?op=ver&id=$id_cliente&id_cliente=$id_cliente'>Ver</a>
                <a class='ui compact blue button' data-inverted='' data-tooltip='Cambia los Datos de {$clienteData['nom_cliente']}' data-position='top left' href='clientes-edit1.php?op=edt&id=$id_cliente&id_cliente=$id_cliente'>Edita</a>
                <a class='ui compact blue button' data-inverted='' data-tooltip='Borra este Cliente de la Tabla' data-position='top left' href='clientes-del1.php?op=del&id=$id_cliente&id_cliente=$id_cliente'>Borrar</a>
-               <a class='ui compact blue button' data-inverted='' data-tooltip='Ver las Compras de {$clienteData['nom_cliente']}' data-position='top left' href='cliente-ver-ventas.php?op=ven&id=$id_cliente&id_cliente=$id_cliente'>Ventas</a>
-               <a class='ui compact blue button' data-inverted='' data-tooltip='Grafico de Compras' data-position='top left' href='clientes-graph.php?op=gra&id=$id_cliente&id_cliente=$id_cliente'>Graphs</a>
+               <a class='ui compact blue button' data-inverted='' data-tooltip='Ver los Presupuestos de {$clienteData['nom_cliente']}' data-position='top left' href='cliente-ver-ventas.php?op=ven&id=$id_cliente&id_cliente=$id_cliente'>Ventas</a>
+               <a class='ui compact blue button' data-inverted='' data-tooltip='Grafico de Presupuestos' data-position='top left' href='clientes-graph.php?op=gra&id=$id_cliente&id_cliente=$id_cliente'>Graphs</a>
                <a class='ui compact blue button' data-inverted='' data-tooltip='Buscar otro Cliente' data-position='top left' href='clientes-list1-2.php'>Buscar</a>
                <a data-inverted='' data-tooltip='Imprimir los Datos de {$clienteData['nom_cliente']}' data-position='top left' href=\"javascript:popup_center('../loadpage/load-page-printer.php?op=cl&id=$id_cliente&id_cliente=$id_cliente&exefile=clientes-ver-printer','800','500'); \">Print</a>
               </div>
