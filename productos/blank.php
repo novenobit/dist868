@@ -20,7 +20,7 @@ if(isset($id) and $id<>"")
 }
 if($op=="empaque")
 {
-  //  echo "$id / ".$op;
+  //  echo "$id &#124; ".$op;
 }
 if($op=="" and $id=="")
 {

@@ -115,11 +115,14 @@ if($AreaProductos=="S")
  { $titlePage="<b>Sub-Categoria - $nom_subcategoria</b>"; }
  if($op2=="na")
  { $titlePage="Productos No Activo"; }
+ if($op2=="pnd")
+ { $titlePage="Productos No Disponibles"; }
+ if($op2=="pna")
+ { $titlePage="Productos No Activo"; }
  if(!isset($codCat))
  { $codCat=""; }
  if(!isset($codSubCat))
  { $codSubCat=""; }
-
 ?>
 
  <div class="mainContent">
@@ -132,7 +135,6 @@ if($AreaProductos=="S")
       ?>
     </div>
     <div class="ten wide column">
-
     <?php
   //  include("productos-list.php");
       if(isset($nomBuscar) and !empty($nomBuscar))
@@ -200,6 +202,10 @@ if($AreaProductos=="S")
       { $sqldata1="select id_producto from productos where cod_subcategoria='$codSubCat'";  }
       if($op2=="na")
       { $sqldata1="select id_producto from productos where activo='' or activo='N'"; }
+      if($op2=="pnd")
+      { $sqldata1="select id_producto from productos where estado<>'1'"; }
+      if($op2=="pna")
+      { $sqldata1="select id_producto from productos where activo<>'S'"; }
 
       if(!isset($proDataFoto))
       { $proDataFoto="N"; }
@@ -258,8 +264,12 @@ if($AreaProductos=="S")
           { $sqldata="select * from productos where cod_subcategoria='$codSubCat' order by nom_producto LIMIT  $from, $max_results"; }
           if($op2=="na")
           { $sqldata="select * from productos where activo='' or activo='N' order by nom_producto LIMIT  $from, $max_results"; }
-
+          if($op2=="pnd")
+          { $sqldata="select * from productos where estado<>'1' order by nom_producto LIMIT  $from, $max_results"; }
+          if($op2=="pna")
+          { $sqldata="select * from productos where activo<>'S' order by nom_producto LIMIT  $from, $max_results"; }
         }
+
         if(!isset($proDataFoto))
         { $proDataFoto="S"; }
         if($proDataFoto=="S")

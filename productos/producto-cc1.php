@@ -112,7 +112,7 @@ include("$dirRoot"."bots/AreasSistema.php");
         <div class="ui cards">
           <div class="card">
            <div class="content">
-            <div class="header">Categor&iacute;a / Grupo</div>
+            <div class="header">Categor&iacute;a &#124; Grupo</div>
             <div class="description">
              <?php
                 if(!empty($mcod_categoria))

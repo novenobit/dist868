@@ -55,7 +55,7 @@ include("find-products.php");
         $submitted=$proData['submitted'];
    echo "<tr>
    <td>
-   <a href='goto-page.php?id=$id_producto'>$nomProducto / $precio1_producto / $submitted</a>
+   <a href='goto-page.php?id=$id_producto'>$nomProducto &#124; $precio1_producto &#124; $submitted</a>
   </td>
  </tr>";
 }

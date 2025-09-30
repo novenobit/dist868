@@ -1,0 +1,212 @@
+<?php
+// ************************************************************* 2023 ********
+//  Sistema de Control de Ventas                                            //
+//  productos.php                                                           //
+//  Copyright (c) 2023-2025 NovenoBIT.com, Noveno Bit Inform&aacute;tica, C.A.   //
+// ***************************************************************************
+include_once("../includes/session.php");
+
+$image="S";
+$menu="S";
+$divider="S";
+$icon="S";
+$input="S";
+$table="S";
+$message="S";
+$label="S";
+$autoPro="S";
+$forms="S";
+$breadCrumb="S";
+$findData="S";
+$popup="S";
+$dropdown="S";
+$topAdmin="S";
+$loadPage="S";
+$accordion="S";
+$dirRoot="../";
+include_once("../includes/headfileFrame.php");
+
+FechayHora();
+$autoPro="S";
+
+if(empty($iduser) and empty($usuario) and empty($clave))
+{ echo "<html><meta http-equiv=refresh content=0;url=../users/usercontrol.php>";
+  exit();
+}
+if(isset($_GET['id']))
+{ $id=$_GET['id']; }
+if(isset($_GET['op']))
+{ $op=$_GET['op']; }
+if(isset($_GET['op2']))
+{ $op2=$_GET['op2']; }
+
+if(isset($_GET['nomBuscar']))
+{ $nomBuscar=$_GET['nomBuscar']; }
+if(isset($_GET['id_cuenta']))
+{ $id_cuenta=$_GET['id_cuenta']; }
+if(isset($_GET['rand_num']))
+{ $rand_num=$_GET['rand_num']; }
+if(isset($_GET['nom_producto']))
+{ $nom_producto="$_GET[nom_producto]"; }
+if(isset($_GET['proDataFoto']))
+{ $proDataFoto="$_GET[proDataFoto]"; }
+if(!isset($nomBuscar))
+{ $nomBuscar=""; }
+if(!isset($op))
+{ $op="lp"; }
+if(!isset($op2))
+{ $op2="nom"; }
+include("$dirRoot"."bots/AreasSistema.php");
+//include("$dirRoot"."includes/leftbar.php");
+
+include("sub-menu.php");
+
+if(!isset($nom_subcategoria))
+{ $nom_subcategoria=""; }
+if(isset($_GET['op2']))
+{ $op2=$_GET['op2']; }
+if($op2=="lis")
+{ $titlePage="Ultimos Productos"; }
+if($op2=="sc")
+{ $titlePage="Sin Categoria"; }
+if($op2=="scb")
+{ $titlePage="Codigo no Numerico"; }
+if($op2=="ssc")
+{ $titlePage="Sin Sub-Categoria"; }
+if($op2=="sf")
+{ $titlePage="Productos Sin Foto"; }
+if($op2=="sp")
+{ $titlePage="Productos Sin Precios"; }
+if($op2=="nom")
+{ $titlePage="Listado por Nombre"; }
+if($op2=="cod")
+{ $titlePage="Listado por <b>Codigo</b>"; }
+if($op2=="cat")
+{ $titlePage="<b>Categoria > $nom_categoria</b>"; }
+if($op2=="subcat")
+{ $titlePage="<b>Sub-Categoria - $nom_subcategoria</b>"; }
+include("productos-list-abc.php");
+if(!isset($codCat))
+{ $codCat=""; }
+if(!isset($codSubCat))
+{ $codSubCat=""; }
+
+//--------------------------------
+//  include("productos-list.php");
+    if(isset($nomBuscar) and !empty($nomBuscar))
+    {
+      if(!isset($op2))
+      { $op2="lis"; }
+      $refreshfile="productos-list.php?op=$op&op2=$op2&op2=$op2&nomBuscar=$nomBuscar";
+    }
+    else
+    { $refreshfile="productos-list.php?op=$op&op2=$op2"; }
+
+    //include("../includes/report-submenu.php");
+    FlushData();
+    //include("productos-list-abc.php");
+    //echo "<br>";
+    FlushData();
+    $num=0;
+    $num1=1;
+   if(!isset($_GET['page']))
+   { $page=1; }
+   else
+   { $page=$_GET['page']; }
+   if(!isset($max_results))
+   {  $max_results="50"; }
+   $table="productos";
+   $toreturn="productos.php";
+   $from=(($page * $max_results) - $max_results);
+   if(!isset($start)) $start=0;
+
+   if($op2=="lis" and $nomBuscar=="")
+   { $sqldata="select id_producto from productos limit 2"; }
+   if($op2=="lis" and $nomBuscar<>"")
+   { $sqldata="select id_producto from productos where nom_producto like '$nomBuscar%' limit 2"; }
+
+   if($op2=="nom")
+   {
+    if(!isset($nomBuscar) or $nomBuscar=="")
+    { $nomBuscar="A"; }
+    $sqldata="select id_producto from productos where nom_producto like '$nomBuscar%' limit 2";
+   }
+   if($op2=="sc")
+   { $sqldata="select id_producto from productos where cod_categoria='' limit 2"; }
+   if($op2=="scb")
+   { $sqldata="select id_producto from productos where codigo_barra='' and codigo_barra NOT REGEXP '[0-9]+' limit 2"; }
+   if($op2=="ssc")
+   { $sqldata="select id_producto from productos where cod_subcategoria='' limit 2"; }
+   if($op2=="sp")
+   { $sqldata="select id_producto from productos where precio1_producto=0 or precio1_producto='' limit 2"; }
+   if($op2=="sf")
+   { $sqldata="select id_producto from productos where foto_producto='' limit 2"; }
+   if($op2=="cod")
+   { $sqldata="select id_producto from productos order by nom_producto limit 2"; }
+   if($op2=="cat")
+   { $sqldata="select id_producto from productos where cod_categoria='$codCat' limit 2"; }
+   if($op2=="subcat")
+   { $sqldata="select id_producto from productos where cod_subcategoria='$codSubCat' limit 2";
+
+   if(!isset($proDataFoto))
+   { $proDataFoto="N"; }}
+   $numFilas=0;
+   $sqlNumPro=mysqli_query($conex1,$sqldata);
+   $numFilas=mysqli_num_rows($sqlNumPro);
+   if($numFilas>0)
+   {
+    if(isset($nomBuscar) and $nomBuscar<>"")
+    {
+      if($op2=="sc")
+      { $sqldata="select * from productos where nom_producto like '$nomBuscar%' and cod_categoria='' order by nom_producto"; }
+      if($op2=="scb")
+      { $sqldata="select * from productos where nom_producto like '$nomBuscar%' and codigo_barra='' and codigo_barra NOT REGEXP '[0-9]+' order by nom_producto"; }
+      if($op2=="ssc")
+      { $sqldata="select * from productos where nom_producto like '$nomBuscar%' and cod_subcategoria='' order by nom_producto"; }
+      if($op2=="sf")
+      { $sqldata="select * from productos where nom_producto like '$nomBuscar%' and foto_producto='' order by nom_producto"; }
+      if($op2=="sp")
+      { $sqldata="select * from productos where nom_producto like '$nomBuscar%' and precio1_producto=0 or precio1_producto='' order by nom_producto"; }
+      if($op2=="nom")
+      { $sqldata="select * from productos where nom_producto like '$nomBuscar%' order by nom_producto"; }
+      if($op2=="lis" and $nomBuscar<>"")
+      { $sqldata="select * from productos where nom_producto like '$nomBuscar%' order by nom_producto"; }
+    }
+    else
+    {
+      if($op2=="sc")
+      { $sqldata="select * from productos where cod_categoria='' order by nom_producto"; }
+      if($op2=="scb")
+      { $sqldata="select * from productos where codigo_barra='' and codigo_barra NOT REGEXP '[0-9]+' order by nom_producto"; }
+      if($op2=="ssc")
+      { $sqldata="select * from productos where cod_subcategoria='' order by nom_producto"; }
+      if($op2=="sf")
+      { $sqldata="select * from productos where foto_producto='' order by nom_producto"; }
+      if($op2=="sp")
+      { $sqldata="select * from productos where precio1_producto=0 or precio1_producto='' order by nom_producto"; }
+      if($op2=="lis" and $nomBuscar=="")
+      { $sqldata="select * from productos order by id_producto desc limit 100"; }
+      if($op2=="lis" and $nomBuscar<>"")
+      { $sqldata="select * from productos where nom_producto like '$nomBuscar%' order by nom_producto"; }
+      if($op2=="nom")
+      { $sqldata="select * from productos where nom_producto like '$nomBuscar%' order by nom_producto"; }
+      if($op2=="cod")
+      { $sqldata="select * from productos order by nom_producto"; }
+      if($op2=="cat")
+      { $sqldata="select * from productos where cod_categoria='$codCat' order by nom_producto"; }
+      if($op2=="subcat")
+      { $sqldata="select * from productos where cod_subcategoria='$codSubCat' order by nom_producto"; }
+    }
+    if(!isset($proDataFoto))
+    { $proDataFoto="N"; }
+    if($proDataFoto=="S")
+    { include("productos-data-foto.php"); }
+    else
+    { include("producto-data.php"); }
+  }
+?>
+
+<?php
+// $showStatus="N";
+include("$dirRoot"."includes/statusAdmin.php");
+?>

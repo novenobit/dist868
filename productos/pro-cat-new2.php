@@ -64,7 +64,7 @@ else
    $boxColorH="cardColor";
    $boxTitle="Listo";
    $boxData="<p>Los Datos Fueron Actualizados .....
-   <br>1 $cod_categoria / $nom_categoria<br>Puede Continuar Trabajando</p>";
+   <br>1 $cod_categoria &#124; $nom_categoria<br>Puede Continuar Trabajando</p>";
    $boxColor="white";
    $boxFoot="";
    $boxColorF="";

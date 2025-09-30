@@ -198,7 +198,7 @@ if(!isset($nom_unidad))
 { $nom_unidad=""; }
 if($proData['nom_unidad']<>$nom_unidad)
 {
-  if($nom_unidad<>"" and $nom_unidad<>"selecciona" and $nom_unidad<>"Unidad / Medida")
+  if($nom_unidad<>"" and $nom_unidad<>"selecciona" and $nom_unidad<>"Unidad &#124; Medida")
   {
    $query2="update productos set nom_unidad='$nom_unidad' where id_producto='$id'";
    $result2=mysqli_query($conex1,$query2);

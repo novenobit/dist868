@@ -153,7 +153,7 @@ include("$dirRoot"."datafiles/catData.php");
              echo $ves." ".$subCatData['nom_subcategoria'];
              $ves++;
              if($ves>=2 and $ves<=$numFilas)
-             { echo " / "; }
+             { echo " &#124; "; }
           }
       }
   ?>

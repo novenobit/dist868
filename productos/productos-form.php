@@ -166,7 +166,7 @@
     <div class='eight wide column'>
      <label>Foto/Imagen</label>
      <input type='file' class='ui input' name='foto_producto'>
-     <p>30 caracteres max sin simbolos / Tama&ntilde;o de Max:600x600px </p> 
+     <p>30 caracteres max sin simbolos &#124; Tama&ntilde;o de Max:600x600px </p> 
     </div>
     <div class='sixteen wide column'>
      <input class="ui submit blue button" type="submit" value="Enviar Datos" id="btnSubmit">

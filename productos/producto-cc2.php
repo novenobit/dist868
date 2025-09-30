@@ -30,7 +30,7 @@ if(isset($_POST['mcod_categoria']))
 if(isset($_POST['cod_subcategoria']))
 { $cod_subcategoria="$_POST[cod_subcategoria]"; }
 $todoBien="N";
-// echo "<br>1 $id<br>2 $cod_categoria / $cod_subcategoria";
+// echo "<br>1 $id<br>2 $cod_categoria &#124; $cod_subcategoria";
 
 if(!isset($cod_categoria) or $cod_categoria=="")
 { $error="falta datos de la Categoria";

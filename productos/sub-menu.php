@@ -1,4 +1,7 @@
 <?php
+if(isset($op2) and $op2<>"")
+{ $op2Org=$op2; }
+
 if(!isset($_SESSION['iduser']) or empty($_SESSION['iduser']))
 {
   echo "<html><meta http-equiv=refresh content=0;url=../index.php>";
@@ -32,33 +35,33 @@ if($AreaProductos<>"S")
      else
      { echo "<a href='#'>".$_SESSION['nombre']." ". $_SESSION['apellido']."</a>"; }
     ?>
-     <div class="divider"> / </div>
+     <div class="divider"> &#124; </div>
      <?php
       if($AreaProductos=="S")
       {
         echo "<a href='../productos/productos.php?proDataFoto=N'>Texto</a>";
      ?>
-       <div class="divider"> / </div>
+       <div class="divider"> &#124; </div>
        <?php echo "<a href='$dirRoot"."productos/productos.php?proDataFoto=S'>Foto</a>"; ?>
-       <div class="divider"> / </div>
+       <div class="divider"> &#124; </div>
        <?php echo "<a href='$dirRoot"."productos/productos.php?op=na&op2=na'>NoActivos</a>"; ?>
-       <div class="divider"> / </div>
+       <div class="divider"> &#124; </div>
        <?php echo "<a href='$dirRoot"."productos/no-disponible1.php?op=nd&op2=nd'>NoDisponible</a>"; ?>
        <?php
         if($CrearProductos=="S")
         {
-          echo "<div class='divider'> / </div>";
+          echo "<div class='divider'> &#124; </div>";
           echo "<a href='$dirRoot"."productos/producto-nuevo1.php'>Nuevo</a>";
        ?>
-         <div class="divider"> / </div>
+         <div class="divider"> &#124; </div>
          <?php echo "<a href='pro-cat.php'>Categoria</a>"; ?>
-         <div class="divider"> / </div>
+         <div class="divider"> &#124; </div>
          <?php echo "<a href='pro-subcat.php'>Sub-Cat</a>"; ?>
-         <div class="divider"> / </div>
+         <div class="divider"> &#124; </div>
          <?php echo "<a href='$dirRoot"."unidades/unidades.php'>Unidades</a>";
         }
        ?>
-       <div class="divider"> / </div>
+       <div class="divider"> &#124; </div>
        <div class="ui dropdown">
         <div class="text">SinDatos</div>
         <i class="dropdown icon"></i>
@@ -72,4 +75,8 @@ if($AreaProductos<>"S")
     }
    ?>
 </div>
-
+<hr>
+<?php
+if(isset($op2Org) and $op2Org<>"")
+{ $op2=$op2Org; }
+?>

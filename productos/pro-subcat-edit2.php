@@ -60,8 +60,8 @@ if(!isset($banner1))
 { $banner1=""; }
 if(!isset($banner2))
 { $banner2=""; }
-//   echo " <br>1 $id / $id_subcategoria<br>2 <br>3 $cod_subcategoria<br>4 $cod_categoria<br>5 $nom_subcategoria<br>6 $foto_subcategoria <br>7 $foto<br>8 $filename";
-// echo "<hr> <br>1 $id / $Ncod_subcategoria<br>4 $Ncod_categoria<br>5 $Nnom_subcategoria<br>6 $Nfoto_subcategoria <br>7 $foto<br>8 $filename";
+//   echo " <br>1 $id &#124; $id_subcategoria<br>2 <br>3 $cod_subcategoria<br>4 $cod_categoria<br>5 $nom_subcategoria<br>6 $foto_subcategoria <br>7 $foto<br>8 $filename";
+// echo "<hr> <br>1 $id &#124; $Ncod_subcategoria<br>4 $Ncod_categoria<br>5 $Nnom_subcategoria<br>6 $Nfoto_subcategoria <br>7 $foto<br>8 $filename";
 
 if(empty($cod_subcategoria) or empty($nom_subcategoria))
 {

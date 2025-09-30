@@ -141,15 +141,15 @@ if(!isset($_SESSION['iduser']) or empty($_SESSION['iduser']))
      }
     ?>
      <?php echo "<a href='../users/usersection.php'>".$_SESSION['nombre']." ". $_SESSION['apellido']."</a>"; ?>
-     <div class="divider font-white"> / </div>
+     <div class="divider font-white"> &#124; </div>
      <?php echo "<a href='$dirRoot"."productos/producto-nuevo1.php'>NuevoProducto</a>"; ?>
-     <div class="divider font-white"> / </div>
+     <div class="divider font-white"> &#124; </div>
      <?php echo "<a href='$dirRoot"."productos/pro-cat-list.php'>Categoria</a>"; ?>
-     <div class="divider font-white"> / </div>
+     <div class="divider font-white"> &#124; </div>
      <?php echo "<a href='pro-subcat.php'>Sub-Cat</a>"; ?>
-     <div class="divider font-white"> / </div>
+     <div class="divider font-white"> &#124; </div>
      <?php echo "<a href='../unidades/unidades-list1.php'>Unidad</a>"; ?>
-     <div class="divider font-white"> / </div>
+     <div class="divider font-white"> &#124; </div>
      <?php echo "<a href='empaque1.php'>EditData</a>"; ?>  <a class="ui red tag small label">Nuevo</a>
   </div>
 </div>

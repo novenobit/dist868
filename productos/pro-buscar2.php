@@ -151,7 +151,7 @@ if($AreaProductos=="S")
       { $codCat=""; }
       if(!isset($codSubCat))
       { $codSubCat=""; }
-      echo "$titlePage / <a href='productos.php?proDataFoto=N&op2=$op2&codCat=$codCat&codSubCat=$codSubCat'>Texto</a> / <a href='productos.php?proDataFoto=S&op2=$op2&codCat=$codCat&codSubCat=$codSubCat'>Foto</a> ";
+      echo "$titlePage &#124; <a href='productos.php?proDataFoto=N&op2=$op2&codCat=$codCat&codSubCat=$codSubCat'>Texto</a> &#124; <a href='productos.php?proDataFoto=S&op2=$op2&codCat=$codCat&codSubCat=$codSubCat'>Foto</a> ";
      ?>
     </div>
     <div class="six wide right aligned column">

@@ -41,7 +41,7 @@
       $bgcolor="white";
       if($activo=="N")
       { $bgcolor="yellow"; }
-      if($estado>1)
+      if($estado<>1)
       { $bgcolor="orange"; }
 
       echo "<tr>";
@@ -75,10 +75,10 @@
       { echo "<br>Codigo Barra: $codigo_barra"; }
 
       if(isset($nom_categoria) and $nom_categoria<>"")
-      { echo " / Categoria: $nom_categoria"; }
+      { echo " &#124; Categoria: $nom_categoria"; }
 
       if(isset($nom_subcategoria) and $nom_subcategoria<>"")
-      { echo " / Sub-Categoria: $nom_subcategoria"; }
+      { echo " &#124; Sub-Categoria: $nom_subcategoria"; }
 
       if($precio1_producto>0)
       { echo "<br>Precio Detal: $precio1_producto"; }
@@ -86,21 +86,21 @@
       if(isset($VerPrecioMayor) and $VerPrecioMayor=="S")
       {
         if($precio2_producto>0 and $precio2_producto<>"")
-        { echo " / Precio Mayorista: $precio2_producto"; }
+        { echo " &#124; Precio Mayorista: $precio2_producto"; }
       }
       if(isset($VerPrecioEspecial) and $VerPrecioEspecial=="S")
       {
         if($precio3_producto>0 and $precio3_producto<>"")
-        { echo " / Precio Especial: $precio3_producto"; }
+        { echo " &#124; Precio Especial: $precio3_producto"; }
 
       }
       if(isset($proData['nom_unidad']) and $proData['nom_unidad']<>"")
       { echo "<br>Unidad: {$proData['nom_unidad']}"; }
       if(isset($proData['empaque']) and $proData['empaque']<>"")
-      { echo " / Empaque: {$proData['empaque']}"; }
+      { echo " &#124; Empaque: {$proData['empaque']}"; }
 
       if(isset($proData['stock_actual']) and $proData['stock_actual']>0)
-      { echo " / Stock: {$proData['stock_actual']}"; }
+      { echo " &#124; Stock: {$proData['stock_actual']}"; }
 
       if($datos_producto<>"")
       { echo "<br>Nota: $datos_producto"; }

@@ -31,7 +31,6 @@ $tableCount="subcategoria";
 include("$dirRoot"."bots/count-records1.php");
 $numSubCat=$numFields;
 
-
 // Ventas
 $fieldCount="id_venta";
 $tableCount="ventas";
@@ -45,24 +44,28 @@ $fieldFind="cod_categoria";
 $tableCount="productos";
 include("$dirRoot"."bots/count-records-exit.php");
 $numSinCat=$numFields;
+
 // Sin Sub-Categorias
 $fieldCount="id_producto";
 $fieldFind="cod_subcategoria";
 $tableCount="productos";
 include("$dirRoot"."bots/count-records-exit.php");
 $numSinSubCat=$numFields;
+
 // Sin Precios
 $fieldCount="id_producto";
 $fieldFind="precio1_producto";
 $tableCount="productos";
 include("$dirRoot"."bots/count-records-exit.php");
 $numPrecios=$numFields;
+
 // Sin Imagenes
 $fieldCount="id_producto";
 $fieldFind="foto_producto";
 $tableCount="productos";
 include("$dirRoot"."bots/count-records-exit.php");
 $numFotos=$numFields;
+
 // Sin Codigo Barra
 $fieldCount="id_producto";
 $fieldFind="codigo_barra";
@@ -72,6 +75,7 @@ $op2="scb";
 include("$dirRoot"."bots/count-records-exit.php");
 $numSinCB=$numFields;
 $op2=$Mop2;
+
 // Sin Unifdad
 $fieldCount="id_producto";
 $fieldFind="nom_unidad";
@@ -81,6 +85,7 @@ $op2="sun";
 include("$dirRoot"."bots/count-records-exit.php");
 $numSinUn=$numFields;
 $op2=$Mop2;
+
 // Sin Empaque
 $fieldCount="id_producto";
 $fieldFind="empaque";
@@ -91,6 +96,26 @@ include("$dirRoot"."bots/count-records-exit.php");
 $numSinEm=$numFields;
 $op2=$Mop2;
 
+// No Disponible
+$fieldCount="id_producto";
+$fieldFind="estado";
+$tableCount="productos";
+$Mop2=$op2;
+$op2="pnd";
+include("$dirRoot"."bots/count-records-exit.php");
+$numNoDis=$numFields;
+$op2=$Mop2;
+
+// No Activo
+$fieldCount="id_producto";
+$fieldFind="activo";
+$tableCount="productos";
+$Mop2=$op2;
+$op2="pna";
+include("$dirRoot"."bots/count-records-exit.php");
+$numNoAct=$numFields;
+$op2=$Mop2;
+
 $SinCodBarra="#";
 $SinCategoria="#";
 $SinSubCategoria="#";
@@ -98,6 +123,8 @@ $SinPrecios="#";
 $SinFotos="#";
 $SinUnidad="#";
 $SinEmpaque="#";
+$NoDisponible="#";
+$NoActivo="#";
 
 if(isset($idnivel) and $idnivel<=3)
 {
@@ -109,6 +136,8 @@ if(isset($idnivel) and $idnivel<=3)
    $SinPrecios="../productos/productos.php?op2=sp";
    $SinUnidad="../productos/productos.php?op2=sun";
    $SinEmpaque="../productos/productos.php?op2=sem";
+   $NoDisponible="../productos/productos.php?op2=pnd";
+   $NoActivo="../productos/productos.php?op2=pna";
  }
  if($AreaProductos=="S" and $CambiaFotos=="S")
  {
@@ -150,6 +179,12 @@ if(isset($idnivel) and $idnivel<=3)
        Sin Empaque
        <?php echo "<div class='ui red left pointing label'>$numSinEm</div>"; ?>
      </a>
+     <a class="item" href="<?php echo $NoDisponible; ?>">
+       No Disponible
+       <?php echo "<div class='ui red left pointing label'>$numNoDis</div>"; ?>
+     </a>
+     <a class="item" href="<?php echo $NoActivo; ?>">
+       No Activo
+       <?php echo "<div class='ui red left pointing label'>$numNoAct</div>"; ?>
+     </a>
 </div>
-
-

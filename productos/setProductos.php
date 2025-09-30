@@ -102,7 +102,7 @@ if(!isset($cambia_precio))
 
 
 { $precio4_producto=0; }
-if(isset($id_unidad) and $id_unidad=="Unidad / Medida")
+if(isset($id_unidad) and $id_unidad=="Unidad &#124; Medida")
 { $id_unidad=""; }
 if(!isset($nom_unidad))
 { $nom_unidad=""; }

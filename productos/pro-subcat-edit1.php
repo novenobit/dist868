@@ -223,7 +223,7 @@ include("$dirRoot"."datafiles/subCatData.php");
              echo $ves." ".$proData['nom_producto'];
              $ves++;
              if($ves>=2 and $ves<=$numFilas)
-             { echo " / "; }
+             { echo " &#124; "; }
           }
       }
   ?>

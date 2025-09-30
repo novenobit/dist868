@@ -116,7 +116,7 @@ if(!isset($op2))
         $boxColorH="cardColor";
         $boxTitle="Listo";
         $boxData="<p>Los Datos Fueron Actualizados .....
-        <br>1 $cod_categoria / $nom_categoria<br>Puede Continuar Trabajando</p>";
+        <br>1 $cod_categoria &#124; $nom_categoria<br>Puede Continuar Trabajando</p>";
         $boxColor="white";
         $boxFoot="";
         $boxColorF="";
@@ -134,7 +134,7 @@ if(!isset($op2))
        $sqlS=mysqli_query($conex1, $queryS);
        $Data=mysqli_fetch_array($sqlS);
        $num=mysqli_num_rows($sqlS);
-       // echo $queryS.' / '.$num;
+       // echo $queryS.' &#124; '.$num;
        if($num>0)
        {
         $sqldel1="delete from productos where cod_categoria ='{$Data['cod_categoria']}' and activo='S'";

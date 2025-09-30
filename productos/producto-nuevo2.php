@@ -177,9 +177,9 @@ if($ok=="S" and isset($nom_producto) and $nom_producto<>"")
 
  if($testData=="S")
  {
-    echo "<br>here1 xxx  Divisa $precio1_producto / Divisa $precioDolarVenta";
-    echo "<br>here1 xxx  Base $precioPlatoBase / ConIva $precioPlatoConIva / Sin Iva  $precioPlatoSinIva";
-    echo "<br>here1 xxx  $precio1_producto / $precioEnDolar";
+    echo "<br>here1 xxx  Divisa $precio1_producto &#124; Divisa $precioDolarVenta";
+    echo "<br>here1 xxx  Base $precioPlatoBase &#124; ConIva $precioPlatoConIva &#124; Sin Iva  $precioPlatoSinIva";
+    echo "<br>here1 xxx  $precio1_producto &#124; $precioEnDolar";
  }
 
 // ---------------------------------------------------
@@ -204,7 +204,7 @@ if($ok=="S" and isset($nom_producto) and $nom_producto<>"")
 // end Foto ------------------------
 // insert data here
 
-//  echo "<br>1 $cod_producto  <br>2 $cod_categoria  <br>3 $cod_subcategoria  <br>4 $nom_producto  <br>5 $datos_producto  <br>6 $precio1_producto  <br>7 $precio_compra  <br>1 $nom_unidad  <br>11 $bultos  <br>4 $filename / $foto_producto";
+//  echo "<br>1 $cod_producto  <br>2 $cod_categoria  <br>3 $cod_subcategoria  <br>4 $nom_producto  <br>5 $datos_producto  <br>6 $precio1_producto  <br>7 $precio_compra  <br>1 $nom_unidad  <br>11 $bultos  <br>4 $filename &#124; $foto_producto";
  }
 }
 else
